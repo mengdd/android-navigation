@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (C) 2018 The Android Open Source Project
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -64,13 +63,11 @@
         </action>
     </fragment>
 
-    <!-- TODO STEP 4 Create a new navigation destination pointing to SettingsFragment -->
-    <!--<fragment-->
-        <!--android:id="@+id/settings_dest"-->
-        <!--android:name="com.example.android.codelabs.navigation.SettingsFragment"-->
-        <!--android:label="@string/settings"-->
-        <!--tools:layout="@layout/settings_fragment" />-->
-    <!-- TODO END STEP 4 -->
+    <fragment
+        android:id="@+id/settings_dest"
+        android:name="com.example.android.codelabs.navigation.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/settings_fragment" />
 
     <fragment
         android:id="@+id/deeplink_dest"
