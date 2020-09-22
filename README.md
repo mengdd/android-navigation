@@ -2,6 +2,19 @@
 
 Content: https://codelabs.developers.google.com/codelabs/android-navigation/
 
+## Notes
+2 Ways to test deep link of this sample:
+
+1:
+```
+adb shell am start -a android.intent.action.VIEW -d "http://www.example.com/urlTest" 
+```
+
+2:
+Navigate via the Google app. 
+You should be able to put `www.example.com/urlTest` in the search bar and the disambiguation window will appear. 
+Select Navigation codelab.
+
 License
 -------
 
