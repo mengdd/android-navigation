@@ -29,13 +29,15 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.onNavDestinationSelected
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 /**
  * A simple activity demonstrating use of a NavHostFragment with a navigation drawer.
  */
 class MainActivity : AppCompatActivity() {
-    private lateinit var appBarConfiguration : AppBarConfiguration
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,10 +82,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupBottomNavMenu(navController: NavController) {
-        // TODO STEP 9.3 - Use NavigationUI to set up Bottom Nav
-//        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_view)
-//        bottomNav?.setupWithNavController(navController)
-        // TODO END STEP 9.3
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_view)
+        bottomNav?.setupWithNavController(navController)
     }
 
     private fun setupNavigationMenu(navController: NavController) {
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupActionBar(navController: NavController,
-                               appBarConfig : AppBarConfiguration) {
+                               appBarConfig: AppBarConfiguration) {
         // TODO STEP 9.6 - Have NavigationUI handle what your ActionBar displays
 //        // This allows NavigationUI to decide what label to show in the action bar
 //        // By using appBarConfig, it will also determine whether to
